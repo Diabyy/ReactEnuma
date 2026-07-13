@@ -1,18 +1,60 @@
-# React + Vite
+# React Training 2 - Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project React + Vite sederhana untuk latihan pembuatan aplikasi daftar tugas (to-do list) dengan tampilan UI yang ringan dan fitur dasar CRUD.
 
-Currently, two official plugins are available:
+## Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Menambahkan tugas baru melalui form input
+- Mengedit deskripsi tugas yang sudah ada
+- Menghapus tugas
+- Menyimpan data ke localStorage agar data tetap ada saat halaman direload
+- Dibangun menggunakan React dan Vite
 
-## React Compiler
+## Teknologi yang Digunakan
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- React 19
+- Vite 8
+- ESLint
+- localStorage untuk penyimpanan data sederhana
 
-Note: This will impact Vite dev & build performances.
+## Prerequisites
 
-## Expanding the ESLint configuration
+Pastikan Anda sudah menginstall:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (versi terbaru disarankan)
+- npm atau pnpm
+
+## Cara Menjalankan Project
+
+1. Install dependency
+   ```bash
+   npm install
+   ```
+
+2. Jalankan development server
+   ```bash
+   npm run dev
+   ```
+
+3. Buka browser dan akses:
+   ```text
+   http://localhost:5173
+   ```
+
+## Script yang Tersedia
+
+- `npm run dev` → menjalankan aplikasi dalam mode development
+- `npm run build` → membuat build produksi
+- `npm run preview` → melihat hasil build lokal
+- `npm run lint` → menjalankan pengecekan ESLint
+
+## Struktur Folder
+
+- `src/` → source code utama aplikasi
+  - `component/` → komponen UI seperti form, list, dan item tugas
+  - `Hook/` → custom hook untuk mengelola state tugas
+- `public/` → file statis
+
+## Catatan
+
+Aplikasi ini dibuat sebagai latihan belajar React, khususnya mengenai state management, custom hook, dan interaksi antar komponen.
