@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-export default function Navbar() {
-  const [activeLink, setActiveLink] = useState('Home');
+export default function Navbar({ activeSection = 'Home', onSectionChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Profil', href: '#profil' },
-    { name: 'Projek', href: '#projek' },
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '#home', icon: 'home' },
+    { name: 'Profil', href: '#profil', icon: 'person' },
+    { name: 'Projek', href: '#projek', icon: 'folder_open' },
+    { name: 'About', href: '#about', icon: 'info' },
   ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLinkClick = (name) => {
+    onSectionChange(name);
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="#home" className="navbar-logo" onClick={() => setActiveLink('Home')}>
+        <a 
+          href="#home" 
+          className="navbar-logo" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleLinkClick('Home');
+          }}
+        >
           <span className="logo-dot">●</span> Logo
         </a>
 
@@ -38,13 +49,14 @@ export default function Navbar() {
             <li key={item.name}>
               <a
                 href={item.href}
-                className={activeLink === item.name ? 'active' : ''}
-                onClick={() => {
-                  setActiveLink(item.name);
-                  setIsOpen(false); // Close mobile menu on click
+                className={activeSection === item.name ? 'active' : ''}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick(item.name);
                 }}
               >
-                {item.name}
+                <span className="material-symbols-outlined nav-item-icon">{item.icon}</span>
+                <span>{item.name}</span>
               </a>
             </li>
           ))}
