@@ -2,13 +2,14 @@ import useTasks from "./Hook/useTaks.jsx";
 import "./App.css";
 import TodoList from "./component/TodoList.jsx";
 import TodoForm from "./component/TodoForm.jsx";
+import Navbar from "./component/Navbar.jsx";
 
 function App() {
   const { tasks, addTask, deleteTask, updateTask } = useTasks();
 
   return (
     <>
-      <nav>Sego Apem Navbar</nav>
+      <Navbar />
       <h1>Sego Apem Store</h1>
       <h3>Makanan Khas Indonesia</h3>
       <TodoForm onAddTask={addTask} />
