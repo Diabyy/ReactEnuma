@@ -22,17 +22,33 @@ export default function Profil() {
           <div className="profile-avatar">
             <span className="material-symbols-outlined">person_outline</span>
           </div>
-          <h3>Diaby</h3>
-          <p className="profile-subtitle">Frontend Developer & Siswa PKL</p>
+          <h3>Adib Diabi</h3>
+          <p className="profile-subtitle">Software Engineering Student & Developer</p>
           <p className="profile-description">
-            Halo! Saya adalah seorang pengembang web antusias yang berfokus pada pembuatan antarmuka digital yang bersih, terstruktur, dan memiliki interaksi yang mulus. Saat ini saya sedang menjalani pelatihan intensif (PKL) untuk menguasai React, Vite, dan arsitektur web modern.
+            Saya adalah siswa SMK jurusan Pengembangan Perangkat Lunak dan GIM (PPLG) yang berfokus pada rekayasa perangkat lunak dan pengembangan Front-End. Saya berfokus pada penciptaan solusi digital yang inovatif, bersih, dan siap diimplementasikan untuk kebutuhan nyata.
           </p>
-          <div className="profile-social">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="social-link">
+          
+          <blockquote className="profile-quote-pill" style={{
+            margin: '0 0 28px 0',
+            padding: '12px 20px',
+            background: 'rgba(255, 255, 255, 0.02)',
+            borderLeft: '3px solid var(--accent)',
+            borderRadius: '0 8px 8px 0',
+            fontSize: '14px',
+            fontStyle: 'italic'
+          }}>
+            “ Leveraging AI as a professional tool, not a replacement. ”
+          </blockquote>
+
+          <div className="profile-social" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+            <a href="https://github.com/Diabyy" target="_blank" rel="noreferrer" className="social-link">
               <span className="material-symbols-outlined">link</span> GitHub
             </a>
-            <a href="mailto:example@email.com" className="social-link">
-              <span className="material-symbols-outlined">mail</span> Email
+            <a href="https://www.linkedin.com/in/adib-diabi" target="_blank" rel="noreferrer" className="social-link">
+              <span className="material-symbols-outlined">work</span> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/diaycod.x/" target="_blank" rel="noreferrer" className="social-link">
+              <span className="material-symbols-outlined">photo_camera</span> Instagram
             </a>
           </div>
         </div>
@@ -41,7 +57,7 @@ export default function Profil() {
         <div className="profile-card skills-card">
           <h3>Keahlian & Teknologi</h3>
           <p className="card-description">
-            Beberapa teknologi dan bahasa pemrograman yang saya pelajari dan gunakan dalam proyek:
+            Beberapa teknologi dan bahasa pemrograman yang saya gunakan dalam pengerjaan proyek:
           </p>
           <div className="skills-list">
             {skills.map((skill, index) => (
