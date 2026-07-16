@@ -1,4 +1,9 @@
 import React from 'react';
+import edupanelImg from '../assets/edupanel_live.png';
+import lapakkilatImg from '../assets/lapakkilat_live.png';
+import labmayaImg from '../assets/labmaya_live.png';
+import portfolioImg from '../assets/portfolio_live.png';
+import filevaultImg from '../assets/filevault_live.png';
 
 export default function Projek() {
   const collaborationProjects = [
@@ -9,6 +14,7 @@ export default function Projek() {
       icon: 'tablet_mac',
       demo: 'https://edu-panel-jet.vercel.app/',
       github: 'https://github.com/DiaztMF/EduPanel',
+      image: edupanelImg,
     },
     {
       title: 'LapakKilat',
@@ -17,6 +23,7 @@ export default function Projek() {
       icon: 'electric_bolt',
       demo: 'https://lapak-kilat.vercel.app/',
       github: null,
+      image: lapakkilatImg,
     },
     {
       title: 'LabMaya',
@@ -25,6 +32,7 @@ export default function Projek() {
       icon: 'science',
       demo: 'https://lab-maya.vercel.app/',
       github: 'https://github.com/Diabyy/LabMaya.git',
+      image: labmayaImg,
     },
   ];
 
@@ -36,6 +44,7 @@ export default function Projek() {
       icon: 'badge',
       demo: 'https://diaby.vercel.app/',
       github: 'https://github.com/Diabyy/PortofolioDiaby--Enuma.git',
+      image: portfolioImg,
     },
     {
       title: 'FileVault',
@@ -44,6 +53,7 @@ export default function Projek() {
       icon: 'cloud_upload',
       demo: 'https://apps-storage-file.vercel.app/',
       github: 'https://github.com/Diabyy/AppsStorageFile.git',
+      image: filevaultImg,
     },
   ];
 
@@ -68,6 +78,13 @@ export default function Projek() {
           )}
         </div>
       </div>
+
+      {project.image && (
+        <div className="project-card-image-wrapper">
+          <img src={project.image} alt={project.title} className="project-card-image" />
+        </div>
+      )}
+
       <h3>{project.title}</h3>
       <p>{project.description}</p>
       <div className="project-tech">
